@@ -1,0 +1,287 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Protest+Guerrilla&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #e9e9e9;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9e9e9;
+}
+
+.main-content {
+  background-color: white;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.logo {
+  width: 220px;
+  margin-bottom: 40px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/*ARTICLE*/
+.article {
+  padding: 50px;
+}
+
+.title {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 2.2rem;
+  margin-top: 8px;
+}
+
+.lead {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+.columns {
+  column-count: 3;
+  column-gap: 40px;
+}
+
+.columns h2 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  break-after: avoid;       /* tries to keep heading with the text that follows */
+}
+
+.columns h2:first-child {
+  margin-top: 0;
+}
+
+.columns p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/*ALBUM GRID */
+.album-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  width: 100%;
+  gap: 0;
+}
+
+.featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.small-albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+}
+
+.small-albums img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+/* AUTHOR*/
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 40px;
+}
+
+.author-text h2 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.author-text p {
+  max-width: 400px;
+}
+
+.author-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.author-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials img {
+  width: 50px;
+  height: 50px;
+}
+
+/* COMMENTS */
+.comments {
+  background-color: #e9e9e9;
+  padding: 50px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.comments h2 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.comment {
+  margin-bottom: 25px;
+}
+
+.username {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #14181d;
+  color: #ccc;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+}
+
+.footer-nav a {
+  color: #ccc;
+}
+
+.footer-nav a:hover {
+  color: white;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(0.8);
+}
+
+/*media queries */
+@media (max-width: 800px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+  .article {
+    padding: 30px 20px;
+  }
+
+  .author {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav,
+  .footer-nav {
+    max-width: 100%;
+    gap: 20px;
+    justify-content: center;
+  }
+}
